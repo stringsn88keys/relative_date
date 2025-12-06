@@ -8,7 +8,8 @@
       "Bash(bundle exec rspec:*)",
       "Bash(ruby exe/relative_time:*)",
       "Bash(bundle exec rake:*)",
-      "Bash(ruby examples/usage.rb:*)"
+      "Bash(ruby examples/usage.rb:*)",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "ask": []

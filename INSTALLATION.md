@@ -5,17 +5,17 @@
 To build the gem from source:
 
 ```bash
-gem build relative_time.gemspec
+gem build relative_date.gemspec
 ```
 
-This will create a file like `relative_time-0.1.0.gem`.
+This will create a file like `relative_date-0.1.0.gem`.
 
 ## Installing Locally
 
 To install the gem on your local machine:
 
 ```bash
-gem install ./relative_time-0.1.0.gem
+gem install ./relative_date-0.1.0.gem
 ```
 
 Or using rake:
@@ -29,7 +29,7 @@ bundle exec rake install
 Add to your Gemfile:
 
 ```ruby
-gem 'relative_time'
+gem 'relative_date'
 ```
 
 Then run:
@@ -53,12 +53,12 @@ bundle install
    ```
 4. Try the CLI:
    ```bash
-   ruby exe/relative_time "2 Mondays ago"
+   ruby exe/relative_date "2 Mondays ago"
    ```
 
 ## Publishing to RubyGems (for maintainers)
 
-1. Update version in `lib/relative_time/version.rb`
+1. Update version in `lib/relative_date/version.rb`
 2. Update `CHANGELOG.md`
 3. Commit changes
 4. Run:

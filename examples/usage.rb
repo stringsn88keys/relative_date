@@ -1,9 +1,9 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative "../lib/relative_time"
+require_relative "../lib/relative_date"
 
-puts "RelativeTime Gem Examples"
+puts "RelativeDate Gem Examples"
 puts "=" * 50
 puts
 
@@ -25,7 +25,7 @@ examples = [
 ]
 
 examples.each do |expression|
-  result = RelativeTime.parse(expression)
+  result = RelativeDate.parse(expression)
   if result
     puts "#{expression.ljust(20)} => #{result.strftime('%Y-%m-%d (%A)')}"
   else
@@ -41,5 +41,5 @@ puts
 puts "Using custom reference date: Monday, January 15, 2024"
 reference = Date.new(2024, 1, 15)
 expression = "2 Mondays ago"
-result = RelativeTime.parse(expression, reference_date: reference)
+result = RelativeDate.parse(expression, reference_date: reference)
 puts "#{expression} => #{result.strftime('%Y-%m-%d (%A)')}"

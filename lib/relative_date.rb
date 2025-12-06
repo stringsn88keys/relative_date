@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative "relative_time/version"
-require_relative "relative_time/parser"
+require_relative "relative_date/version"
+require_relative "relative_date/parser"
 
-module RelativeTime
+module RelativeDate
   class Error < StandardError; end
 
   # Parse a relative time expression and return a Date

@@ -1,4 +1,4 @@
-# RelativeTime
+# RelativeDate
 
 A Ruby gem for parsing natural language relative date expressions like "2 Mondays ago", "next Friday", "3 weeks from now", and more.
 
@@ -7,7 +7,7 @@ A Ruby gem for parsing natural language relative date expressions like "2 Monday
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'relative_time'
+gem 'relative_date'
 ```
 
 And then execute:
@@ -16,29 +16,29 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install relative_time
+    $ gem install relative_date
 
 ## Usage
 
 ### Ruby API
 
 ```ruby
-require 'relative_time'
+require 'relative_date'
 
 # Parse a relative date expression
-date = RelativeTime.parse("2 Mondays ago")
+date = RelativeDate.parse("2 Mondays ago")
 #=> #<Date: 2025-11-24>
 
 # Use a custom reference date (defaults to today)
-date = RelativeTime.parse("next Friday", reference_date: Date.new(2024, 1, 15))
+date = RelativeDate.parse("next Friday", reference_date: Date.new(2024, 1, 15))
 #=> #<Date: 2024-01-19>
 
 # Use parse! to raise an error on invalid input
-date = RelativeTime.parse!("tomorrow")
+date = RelativeDate.parse!("tomorrow")
 #=> #<Date: 2025-12-07>
 
-RelativeTime.parse!("invalid input")
-#=> RelativeTime::Error: Unable to parse 'invalid input'
+RelativeDate.parse!("invalid input")
+#=> RelativeDate::Error: Unable to parse 'invalid input'
 ```
 
 ### Command Line
@@ -46,16 +46,16 @@ RelativeTime.parse!("invalid input")
 The gem includes a CLI tool:
 
 ```bash
-$ relative_time "2 Mondays ago"
+$ relative_date "2 Mondays ago"
 2025-11-24
 
-$ relative_time "next Friday"
+$ relative_date "next Friday"
 2025-12-12
 
-$ relative_time "3 weeks from now"
+$ relative_date "3 weeks from now"
 2025-12-27
 
-$ relative_time "tomorrow"
+$ relative_date "tomorrow"
 2025-12-07
 ```
 
@@ -98,29 +98,29 @@ $ relative_time "tomorrow"
 ```ruby
 # Today is Friday, December 6, 2025
 
-RelativeTime.parse("2 Mondays ago")
+RelativeDate.parse("2 Mondays ago")
 #=> #<Date: 2025-11-24> (Monday, November 24, 2025)
 
-RelativeTime.parse("next Friday")
+RelativeDate.parse("next Friday")
 #=> #<Date: 2025-12-12> (Friday, December 12, 2025)
 
-RelativeTime.parse("last Sunday")
+RelativeDate.parse("last Sunday")
 #=> #<Date: 2025-11-30> (Sunday, November 30, 2025)
 
-RelativeTime.parse("3 weeks from now")
+RelativeDate.parse("3 weeks from now")
 #=> #<Date: 2025-12-27> (Saturday, December 27, 2025)
 
-RelativeTime.parse("5 days ago")
+RelativeDate.parse("5 days ago")
 #=> #<Date: 2025-12-01> (Monday, December 1, 2025)
 
-RelativeTime.parse("2 months ago")
+RelativeDate.parse("2 months ago")
 #=> #<Date: 2025-10-06> (Monday, October 6, 2025)
 
-RelativeTime.parse("tomorrow")
+RelativeDate.parse("tomorrow")
 #=> #<Date: 2025-12-07> (Saturday, December 7, 2025)
 
 # With a custom reference date
-RelativeTime.parse("2 Mondays ago", reference_date: Date.new(2024, 1, 15))
+RelativeDate.parse("2 Mondays ago", reference_date: Date.new(2024, 1, 15))
 #=> #<Date: 2024-01-01> (Monday, January 1, 2024)
 ```
 
@@ -132,7 +132,7 @@ To install this gem onto your local machine, run `bundle exec rake install`.
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/yourusername/relative_time.
+Bug reports and pull requests are welcome on GitHub at https://github.com/yourusername/relative_date.
 
 ## License
 

@@ -13,7 +13,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Support for next/last weekday patterns (e.g., "next Monday", "last Friday")
 - Support for unit-based relative dates (e.g., "3 days ago", "2 weeks from now")
 - Support for simple relative dates (today, tomorrow, yesterday)
-- Command-line interface (`relative_time` executable)
+- Command-line interface (`relative_date` executable)
 - Comprehensive test suite with RSpec
 - Case-insensitive parsing
 - Both `parse` and `parse!` methods

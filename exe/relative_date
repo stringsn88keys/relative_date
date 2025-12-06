@@ -1,16 +1,16 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require_relative "../lib/relative_time"
+require_relative "../lib/relative_date"
 
 if ARGV.empty?
-  puts "Usage: relative_time <expression>"
+  puts "Usage: relative_date <expression>"
   puts ""
   puts "Examples:"
-  puts "  relative_time '2 Mondays ago'"
-  puts "  relative_time 'next Friday'"
-  puts "  relative_time '3 weeks from now'"
-  puts "  relative_time 'yesterday'"
+  puts "  relative_date '2 Mondays ago'"
+  puts "  relative_date 'next Friday'"
+  puts "  relative_date '3 weeks from now'"
+  puts "  relative_date 'yesterday'"
   puts ""
   puts "Supported patterns:"
   puts "  - N <weekday>s ago/from now (e.g., '2 Mondays ago', '3 Fridays from now')"
@@ -21,7 +21,7 @@ if ARGV.empty?
 end
 
 input = ARGV.join(" ")
-result = RelativeTime.parse(input)
+result = RelativeDate.parse(input)
 
 if result
   puts result.strftime("%Y-%m-%d")

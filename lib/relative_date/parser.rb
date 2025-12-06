@@ -3,7 +3,7 @@
 require "date"
 require "time"
 
-module RelativeTime
+module RelativeDate
   class Parser
     WEEKDAYS = {
       "monday" => 1,
