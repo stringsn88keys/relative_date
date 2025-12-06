@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle gem:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)",
+      "Bash(bundle install:*)",
+      "Bash(bundle exec rspec:*)",
+      "Bash(ruby exe/relative_time:*)",
+      "Bash(bundle exec rake:*)",
+      "Bash(ruby examples/usage.rb:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
