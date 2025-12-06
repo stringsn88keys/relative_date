@@ -5,12 +5,12 @@ require_relative "lib/relative_date/version"
 Gem::Specification.new do |spec|
   spec.name = "relative_date"
   spec.version = RelativeDate::VERSION
-  spec.authors = ["Your Name"]
-  spec.email = ["your.email@example.com"]
+  spec.authors = ["Thomas Powell"]
+  spec.email = ["twilliampowell@gmail.com"]
 
   spec.summary = "Parse and calculate relative dates like '2 Mondays ago'"
   spec.description = "A Ruby gem for parsing natural language relative date expressions like '2 Mondays ago', 'next Friday', '3 weeks from now', etc."
-  spec.homepage = "https://github.com/yourusername/relative_date"
+  spec.homepage = "https://github.com/stringsn88keys/relative_date"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.7.0"
 
